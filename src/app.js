@@ -1,5 +1,5 @@
-import express from "express";
-import morgan from "morgan";
+const express = require("express");
+const morgan = require("morgan");
 
 const app = express();
 
@@ -11,4 +11,4 @@ app.get("/ping", (req, res) => {
   res.send("pong");
 });
 
-export default app;
+module.exports = app;
