@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head'); %>
+  </head>
+  <body>
+    <div class="container">
+      <% if(message && message.length !== 0){ %>
+      <p><%-message[message.length -1]%></p>
+      <% } else{ %> <% } %>
+      <form class="w-50" action="/api/login" method="post">
+        <div class="mb-3">
+          <label>username</label>
+          <input name="username" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label>password</label>
+          <input name="password" class="form-control" required />
+        </div>
+        <button class="btn btn-outline-primary">login</button>
+      </form>
+    </div>
+  </body>
+</html>
